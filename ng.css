@@ -1,0 +1,203 @@
+body{margin:0 auto;}
+.timer{
+    margin-right:32%;
+    font-family:mv boli;
+    display:flex;
+    justify-content:center;
+}
+.elka{
+    width:30%;
+    height:35vw;
+    position:absolute;
+    top:20%;
+    left:5%;
+}
+.time{
+    width:50%;
+    position:absolute;
+    top:20%;
+    left:40%;
+    display:flex;
+    flex-direction:column;
+    color:rgb(235, 188, 61);
+}
+.pozd1{
+    display:none;
+    width:55%;
+    border: 1px solid #99e6fc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px #99e6fc;
+    position:absolute;
+    top:55%;
+    left:42%;
+    justify-content:center;
+    align-items:center;
+}
+.present1{
+    width:10vw;
+    height:10vw;
+    position:absolute;
+    top:76vh;
+    left:6vw;
+}
+.present2{
+    width:10vw;
+    height:10vw;
+    position:absolute;
+    top:76vh;
+    left:21vw;
+}
+.salut{
+    width:10vw;
+    height:10vw;
+    position:absolute;
+    top:76vh;
+    left:13vw;
+}
+
+.merry-xmas { 
+    margin: 0 auto 10px auto; 
+    width: 400px; 
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transform:scale(1.8)
+}
+@keyframes roty {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+[class^="light"] {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    transition-property:background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    animation: light 5s infinite;
+    z-index: 6;
+}
+@keyframes light {
+    0%   {background:transparent;}
+    50%  {background:#ffffff;}
+    100% {background:transparent;}
+}
+.xmas-lights {
+    position: relative;
+    top:-50px;
+    left: -15px;
+    z-index: 6;
+    width:100%;
+}
+.light1 {
+    top: 150px;
+    left: 180px;
+}
+.light2 {
+    top: 130px;
+    left: 210px;
+    animation-delay: 3s;
+}
+.light3 {
+    top: 200px;
+    left: 150px;
+    animation-delay: 2s;
+}
+.light4 {
+    top: 210px;
+    left: 220px;
+    animation-delay: 1s;
+}
+.light5 {
+    top: 260px;
+    left: 180px;
+    animation-delay: 3s;
+}
+.light6 {
+    top: 240px;
+    left: 150px;
+    animation-delay: 2s;
+}
+.light7 {
+    top: 250px;
+    left: 270px;
+    animation-delay: 1s;
+}
+.light8 {
+    top: 300px;
+    left: 280px;
+    animation-delay: 3s;
+}
+.light9 {
+    top: 300px;
+    left: 200px;
+    animation-delay: 2s;
+}
+.light10 {
+    top: 160px;
+    left: 240px;
+    animation-delay: 1s;
+}
+.light11 {
+    top: 350px;
+    left: 180px;
+    animation-delay: 2s;
+}
+.light12 {
+    top: 3150px;
+    left: 210px;
+    animation-delay: 3s;
+}
+.light13 {
+    top: 370px;
+    left: 120px;
+    animation-delay: 2s;
+}
+.light14 {
+    top: 290px;
+    left: 220px;
+    animation-delay: 1s;
+}
+.light15 {
+    top: 320px;
+    left: 150px;
+    animation-delay: 3s;
+}
+.light16 {
+    top: 370px;
+    left: 200px;
+    animation-delay: 2s;
+}
+.light17 {
+    top: 290px;
+    left: 220px;
+    animation-delay: 1s;
+}
+.light18 {
+    top: 320px;
+    left: 260px;
+    animation-delay: 3s;
+}
+.light19 {
+    top: 370px;
+    left: 300px;
+    animation-delay: 3s;
+}
+.light20 {
+    top: 350px;
+    left: 250px;
+    animation-delay: 3s;
+}
+
+body, html {
+    margin:0;
+    padding:0;
+  }
