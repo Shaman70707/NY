@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Year</title>
+  <link rel="stylesheet" href="ng.css">
+  <link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      :root {
+        scroll-behavior: smooth;
+      }
+    }
+
+    body {
+      margin:0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .timer__items {
+      display: flex;
+      font-size: 4vw;
+    }
+
+    .timer__item {
+      position: relative;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-bottom: 5%;
+      text-align: center;
+    }
+
+    .timer__item::before {
+      content: attr(data-title);
+      font-family:cursive;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      font-size: 1vw;
+    }
+
+    .timer__item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // конечная дата
+      const deadline = new Date('2025-12-31T23:59:59');
+      // id таймера
+      let timerId = null;
+      // склонение числительных
+      function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+      }
+      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+      function countdownTimer() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          clearInterval(timerId);
+        }
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        $days.textContent = days < 10 ? '0' + days : days;
+        $hours.textContent = hours < 10 ? '0' + hours : hours;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+      }
+      // получаем элементы, содержащие компоненты даты
+      const $days = document.querySelector('.timer__days');
+      const $hours = document.querySelector('.timer__hours');
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
+      // вызываем функцию countdownTimer
+      countdownTimer();
+      // вызываем функцию countdownTimer каждую секунду
+      timerId = setInterval(countdownTimer, 1000);
+    });
+  </script>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+<script>
+	new Snow ();
+</script>
+  <div class="time">
+    <div style="font-size:2vw;font-family:comic sans ms;display:flex;justify-content:center;">До Нового Года осталось:</div>
+    <div class="timer">
+      <div class="timer__items">
+        <div class="timer__item timer__days">00</div>
+        <div class="timer__item timer__hours">00</div>
+        <div class="timer__item timer__minutes">00</div>
+        <div class="timer__item timer__seconds">00</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img class="elka" src="ffce4101e5f3693a83d7c3266d014805-Photoroom.png">
+    <div class="present1"><img style="width:100%;height:100%;" onclick="p_text()" src="6cea7835c6b5df0ce009723985ff1f22-Photoroom.png"></div>
+    <div class="present2"><img  style="width:100%;height:100%;" onclick="p_text()" src="pngtree-christmas-gift-red-3d-package-png-image_3986516-Photoroom.png"></div>
+    <div class="salut"><img style="width:100%;height:100%;" onclick="fr()" src="salut.png"></div>
+    <div class="pozd1">
+      <span style="display:flex;justify-content:center;align-content:center;font-size:1.5vw;font-family:comic sans ms;color:rgb(235, 188, 61);text-align:center;" id="txt">С наступающим Новым Годом!</span>
+    </div>
+  </div>
+  <div style="position:absolute;right:27%;top:1%">
+    <div class="merry-xmas">
+      <div class="xmas-lights">
+          <div class="light1"></div>
+          <div class="light2"></div>
+          <div class="light3"></div>
+          <div class="light4"></div>
+          <div class="light5"></div>
+          <div class="light6"></div>
+          <div class="light7"></div>
+          <div class="light8"></div>
+          <div class="light9"></div>
+          <div class="light10"></div>
+          <div class="light11"></div>
+          <div class="light12"></div>
+          <div class="light13"></div>
+          <div class="light14"></div>
+          <div class="light15"></div>
+          <div class="light16"></div>
+          <div class="light17"></div>
+          <div class="light18"></div>
+          <div class="light19"></div>
+          <div class="light20"></div>
+      </div>
+    </div>
+  </div>
+  <canvas></canvas>
+  <style type="text/css">
+
+    .garland_image {position: absolute; top: 0; left: 0; width: 100%; height: 30px; overflow: hidden; z-index: 99; background: url(https://www.expertplus.ru/UserFiles/Image/content/new_year/02.gif) repeat-x 100%; pointer-events: none;}
+
+    @media (max-width: 767px) {.garland_image {display: none!important;}}
+
+</style>
+<script>
+
+    var div = document.createElement('div');
+
+    div.innerHTML = '<div class="garland_image"></div>';
+
+    document.body.insertBefore(div, document.body.firstChild);
+
+</script>
+<script src="ng.js"></script>
+</body>
+</html>	
